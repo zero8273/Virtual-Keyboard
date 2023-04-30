@@ -1,1 +1,42 @@
-/*# sourceMappingURL=style.css.map */
+.keyboard {
+  margin: 0 auto;
+  width: 860px;
+}
+.keyboard__row {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+}
+.key-backspase {
+  width: 115px;
+}
+.key-tab {
+  width: 55px;
+}
+.key-del {
+  width: 55px;
+}
+.key-caps {
+  width: 110px;
+}
+.key-enter {
+  width: 110px;
+}
+.key-shift {
+  width: 110px;
+}
+.key-spase {
+  width: 375px;
+}
+.key-ctrl {
+  width: 55px;
+}
+.key:active {
+  background-color: bisque;
+  border-radius: 10px;
+}/*# sourceMappingURL=style.css.map */

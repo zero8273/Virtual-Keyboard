@@ -1,0 +1,42 @@
+.keyboard {
+  margin: 0 auto;
+  width: 860px;
+  &__row {
+    display: flex;
+    justify-content: center;
+  }
+}
+.key {
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+  &-backspase {
+    width: 115px;
+  }
+  &-tab {
+    width: 55px;
+  }
+  &-del {
+    width: 55px;
+  }
+  &-caps {
+    width: 110px;
+  }
+  &-enter {
+    width: 110px;
+  }
+  &-shift {
+    width: 110px;
+  }
+  &-spase {
+    width: 375px;
+  }
+  &-ctrl {
+    width: 55px;
+  }
+  &:active {
+    background-color: bisque;
+    //  border: none;
+    border-radius: 10px;
+  }
+}
