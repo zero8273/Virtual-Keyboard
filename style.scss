@@ -34,11 +34,9 @@
   &-ctrl {
     width: 55px;
   }
-  //   &:active {
-  //     background-color: bisque;
-  //     //  border: none;
-  //     border-radius: 10px;
-  //   }
+  &:focus-visible {
+    outline: none;
+  }
 }
 .active {
   background-color: #00ff00; /* зеленый фон при активном состоянии */
