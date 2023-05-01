@@ -38,12 +38,11 @@
     outline: none;
   }
 }
-.active {
-  background-color: #00ff00; /* зеленый фон при активном состоянии */
-  color: #ffffff; /* белый текст при активном состоянии */
-  font-weight: bold; /* жирный шрифт при активном состоянии */
-}
+
 .animate {
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  border-radius: 10px;
+  font-size: 1.1rem;
 }

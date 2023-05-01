@@ -1098,9 +1098,16 @@ const functionalKeys = [
   'Tab',
   'Backspace',
 ];
+console.log(localStorage.leng);
+console.log(JSON.parse(localStorage.layout));
 
-curentLayout = keysEng;
-nowLang = 'eng';
+if (localStorage.layout) {
+  curentLayout = JSON.parse(localStorage.layout);
+  nowLang = localStorage.leng;
+} else {
+  curentLayout = keysEng;
+  nowLang = 'eng';
+}
 
 const keyboard = document.createElement('div');
 keyboard.classList.add('keyboard');
@@ -1141,7 +1148,6 @@ const creatLayout = function (arr) {
 creatLayout(curentLayout);
 
 document.addEventListener('keydown', function removeAnimation(e) {
-  console.log(e);
   e.preventDefault();
   textarea.focus();
   const key = document.querySelector(`button[data-key="${e.code}"]`);
@@ -1159,7 +1165,6 @@ document.addEventListener('keydown', function removeAnimation(e) {
   }
   //shift key
   else if (key.getAttribute('data-key') === 'ShiftLeft' && nowLang === 'eng') {
-    console.log(nowLang);
     curentLayout = shiftEngKeys;
     //  nowLang = 'bigEng';
     creatLayout(curentLayout);
@@ -1202,7 +1207,6 @@ document.addEventListener('keydown', function removeAnimation(e) {
   }
   //RIGHT SHIFT
   else if (key.getAttribute('data-key') === 'ShiftRight' && nowLang === 'eng') {
-    console.log(nowLang);
     curentLayout = shiftEngKeys;
     //  nowLang = 'bigEng';
     creatLayout(curentLayout);
@@ -1295,7 +1299,6 @@ document.addEventListener('keydown', function removeAnimation(e) {
       nowLang = 'bigEng';
       creatLayout(curentLayout);
     }
-    console.log(nowLang);
   }
   ///else functional key
   else if (
@@ -1312,7 +1315,7 @@ document.addEventListener('keydown', function removeAnimation(e) {
   ///other key
   else if (key && !functionalKeys.includes(key.getAttribute('data-key'))) {
     key.classList.add('animate');
-    //  console.log(key.textContent);
+
     const cursorPosition = textarea.selectionStart;
     const currentValue = textarea.value;
     const newValue =
@@ -1444,11 +1447,10 @@ textarea.addEventListener('keydown', (event) => {
 
 //Mouse event///////////////////////////////////////////////////////////////////////////////////////////Mouse event
 document.addEventListener('mousedown', function removeAnimation(e) {
-  //   console.log(e.target);
-
   if (e.target.classList.contains('key')) {
     const key = e.target;
     if (key.getAttribute('data-key') === 'Enter') {
+      textarea.focus();
       key.classList.add('animate');
       const cursorPosition = textarea.selectionStart;
       const currentValue = textarea.value;
@@ -1462,6 +1464,7 @@ document.addEventListener('mousedown', function removeAnimation(e) {
       key.getAttribute('data-key') === 'Backspace' ||
       key.getAttribute('data-key') === 'Delete'
     ) {
+      textarea.focus();
       const start = textarea.selectionStart;
       const end = textarea.selectionEnd;
       const value = textarea.value;
@@ -1486,9 +1489,8 @@ document.addEventListener('mousedown', function removeAnimation(e) {
       key.getAttribute('data-key') === 'ShiftLeft' &&
       nowLang === 'eng'
     ) {
-      console.log(nowLang);
       curentLayout = shiftEngKeys;
-      //  nowLang = 'bigEng';
+
       creatLayout(curentLayout);
       document
         .querySelector(`button[data-key="ShiftLeft"]`)
@@ -1535,7 +1537,6 @@ document.addEventListener('mousedown', function removeAnimation(e) {
       key.getAttribute('data-key') === 'ShiftRight' &&
       nowLang === 'eng'
     ) {
-      console.log(nowLang);
       curentLayout = shiftEngKeys;
       //  nowLang = 'bigEng';
       creatLayout(curentLayout);
@@ -1628,7 +1629,6 @@ document.addEventListener('mousedown', function removeAnimation(e) {
         nowLang = 'bigEng';
         creatLayout(curentLayout);
       }
-      console.log(nowLang);
     }
     ///else functional key
     else if (
@@ -1642,8 +1642,9 @@ document.addEventListener('mousedown', function removeAnimation(e) {
     }
     ///other key
     else if (key && !functionalKeys.includes(key.getAttribute('data-key'))) {
+      textarea.focus();
       key.classList.add('animate');
-      //  console.log(key.textContent);
+
       const cursorPosition = textarea.selectionStart;
       const currentValue = textarea.value;
       const newValue =
@@ -1657,7 +1658,6 @@ document.addEventListener('mousedown', function removeAnimation(e) {
 });
 
 document.addEventListener('mouseup', function removeAnimation(e) {
-  //   console.log(e.target);
   if (e.target.classList.contains('key')) {
     const key = e.target;
     if (key.getAttribute('data-key') === 'ShiftLeft' && nowLang === 'eng') {
@@ -1757,10 +1757,10 @@ document.addEventListener('mouseup', function removeAnimation(e) {
     }
   }
 });
-
+// console.log(curentLayout, nowLang);
 textarea.addEventListener('mousedown', (e) => {
   const key = e.target;
-  console.log(key);
+
   if (
     key.getAttribute('data-key') === 'Backspace' ||
     key.getAttribute('data-key') === 'Delete'
@@ -1784,4 +1784,9 @@ textarea.addEventListener('mousedown', (e) => {
 
     e.preventDefault();
   }
+});
+
+window.addEventListener('beforeunload', function (e) {
+  localStorage.layout = JSON.stringify(curentLayout);
+  localStorage.leng = nowLang;
 });
