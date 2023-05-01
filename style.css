@@ -1,6 +1,7 @@
 .keyboard {
   margin: 0 auto;
   width: 860px;
+  margin-top: 50px;
 }
 .keyboard__row {
   display: flex;
@@ -44,6 +45,12 @@
   transform: scale(1.1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   font-weight: bold;
-  border-radius: 10px;
   font-size: 1.1rem;
+}
+
+.text {
+  margin: 0 auto;
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 800px;
 }/*# sourceMappingURL=style.css.map */

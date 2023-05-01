@@ -3,7 +3,7 @@ textarea.name = 'text';
 textarea.id = 'keyboard';
 textarea.cols = 30;
 textarea.rows = 10;
-
+textarea.classList.add('text');
 // const keyboard = document.createElement('div');
 // keyboard.classList.add('keyboard');
 let curentLayout;
@@ -1156,13 +1156,13 @@ document.addEventListener('keydown', (e) => {
     const currentValue = textarea.value;
     const newValue = `${currentValue.substring(
       0,
-      cursorPosition,
+      cursorPosition
     )}\n${currentValue.substring(cursorPosition)}`;
     textarea.value = newValue;
     textarea.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
   } else if (
-    key.getAttribute('data-key') === 'ShiftLeft'
-    && nowLang === 'eng'
+    key.getAttribute('data-key') === 'ShiftLeft' &&
+    nowLang === 'eng'
   ) {
     curentLayout = shiftEngKeys;
     //  nowLang = 'bigEng';
@@ -1177,8 +1177,8 @@ document.addEventListener('keydown', (e) => {
       .querySelector('button[data-key="ShiftLeft"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftLeft'
-    && nowLang === 'bigEng'
+    key.getAttribute('data-key') === 'ShiftLeft' &&
+    nowLang === 'bigEng'
   ) {
     curentLayout = keysEng;
     //  nowLang = 'eng';
@@ -1190,8 +1190,8 @@ document.addEventListener('keydown', (e) => {
       .querySelector('button[data-key="CapsLock"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftLeft'
-    && nowLang === 'bigRu'
+    key.getAttribute('data-key') === 'ShiftLeft' &&
+    nowLang === 'bigRu'
   ) {
     curentLayout = keysRu;
     //  nowLang = 'ru';
@@ -1203,8 +1203,8 @@ document.addEventListener('keydown', (e) => {
       .querySelector('button[data-key="CapsLock"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'eng'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'eng'
   ) {
     curentLayout = shiftEngKeys;
 
@@ -1213,8 +1213,8 @@ document.addEventListener('keydown', (e) => {
       .querySelector('button[data-key="ShiftRight"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'ru'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'ru'
   ) {
     curentLayout = shiftKeysRu;
 
@@ -1223,8 +1223,8 @@ document.addEventListener('keydown', (e) => {
       .querySelector('button[data-key="ShiftRight"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'bigEng'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'bigEng'
   ) {
     curentLayout = keysEng;
 
@@ -1236,8 +1236,8 @@ document.addEventListener('keydown', (e) => {
       .querySelector('button[data-key="CapsLock"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'bigRu'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'bigRu'
   ) {
     curentLayout = keysRu;
 
@@ -1297,13 +1297,13 @@ document.addEventListener('keydown', (e) => {
       creatLayout(curentLayout);
     }
   } else if (
-    key.getAttribute('data-key') === 'Backspace'
-    || key.getAttribute('data-key') === 'ControlLeft'
-    || key.getAttribute('data-key') === 'ControlRight'
-    || key.getAttribute('data-key') === 'AltRight'
-    || key.getAttribute('data-key') === 'AltLeft'
-    || key.getAttribute('data-key') === 'Tab'
-    || key.getAttribute('data-key') === 'Delete'
+    key.getAttribute('data-key') === 'Backspace' ||
+    key.getAttribute('data-key') === 'ControlLeft' ||
+    key.getAttribute('data-key') === 'ControlRight' ||
+    key.getAttribute('data-key') === 'AltRight' ||
+    key.getAttribute('data-key') === 'AltLeft' ||
+    key.getAttribute('data-key') === 'Tab' ||
+    key.getAttribute('data-key') === 'Delete'
   ) {
     key.classList.add('animate');
   } else if (key && !functionalKeys.includes(key.getAttribute('data-key'))) {
@@ -1311,9 +1311,10 @@ document.addEventListener('keydown', (e) => {
 
     const cursorPosition = textarea.selectionStart;
     const currentValue = textarea.value;
-    const newValue = currentValue.substring(0, cursorPosition)
-      + key.textContent
-      + currentValue.substring(cursorPosition);
+    const newValue =
+      currentValue.substring(0, cursorPosition) +
+      key.textContent +
+      currentValue.substring(cursorPosition);
     textarea.value = newValue;
     textarea.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
   }
@@ -1338,8 +1339,8 @@ document.addEventListener('keyup', (e) => {
       .querySelector('button[data-key="ShiftLeft"]')
       .classList.remove('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftLeft'
-    && nowLang === 'bigEng'
+    key.getAttribute('data-key') === 'ShiftLeft' &&
+    nowLang === 'bigEng'
   ) {
     curentLayout = shiftEngKeys;
     nowLang = 'bigEng';
@@ -1351,8 +1352,8 @@ document.addEventListener('keyup', (e) => {
       .querySelector('button[data-key="CapsLock"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftLeft'
-    && nowLang === 'bigRu'
+    key.getAttribute('data-key') === 'ShiftLeft' &&
+    nowLang === 'bigRu'
   ) {
     curentLayout = shiftKeysRu;
     nowLang = 'bigRu';
@@ -1364,8 +1365,8 @@ document.addEventListener('keyup', (e) => {
       .querySelector('button[data-key="CapsLock"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'eng'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'eng'
   ) {
     curentLayout = keysEng;
     nowLang = 'eng';
@@ -1374,8 +1375,8 @@ document.addEventListener('keyup', (e) => {
       .querySelector('button[data-key="ShiftRight"]')
       .classList.remove('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'ru'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'ru'
   ) {
     curentLayout = keysRu;
     nowLang = 'ru';
@@ -1384,8 +1385,8 @@ document.addEventListener('keyup', (e) => {
       .querySelector('button[data-key="ShiftRight"]')
       .classList.remove('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'bigEng'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'bigEng'
   ) {
     curentLayout = shiftEngKeys;
     nowLang = 'bigEng';
@@ -1397,8 +1398,8 @@ document.addEventListener('keyup', (e) => {
       .querySelector('button[data-key="CapsLock"]')
       .classList.add('animate');
   } else if (
-    key.getAttribute('data-key') === 'ShiftRight'
-    && nowLang === 'bigRu'
+    key.getAttribute('data-key') === 'ShiftRight' &&
+    nowLang === 'bigRu'
   ) {
     curentLayout = shiftKeysRu;
     nowLang = 'bigRu';
@@ -1460,13 +1461,13 @@ document.addEventListener('mousedown', (e) => {
       const currentValue = textarea.value;
       const newValue = `${currentValue.substring(
         0,
-        cursorPosition,
+        cursorPosition
       )}\n${currentValue.substring(cursorPosition)}`;
       textarea.value = newValue;
       textarea.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
     } else if (
-      key.getAttribute('data-key') === 'Backspace'
-      || key.getAttribute('data-key') === 'Delete'
+      key.getAttribute('data-key') === 'Backspace' ||
+      key.getAttribute('data-key') === 'Delete'
     ) {
       textarea.focus();
       const start = textarea.selectionStart;
@@ -1497,8 +1498,8 @@ document.addEventListener('mousedown', (e) => {
 
       e.preventDefault();
     } else if (
-      key.getAttribute('data-key') === 'ShiftLeft'
-      && nowLang === 'eng'
+      key.getAttribute('data-key') === 'ShiftLeft' &&
+      nowLang === 'eng'
     ) {
       curentLayout = shiftEngKeys;
 
@@ -1507,8 +1508,8 @@ document.addEventListener('mousedown', (e) => {
         .querySelector('button[data-key="ShiftLeft"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftLeft'
-      && nowLang === 'ru'
+      key.getAttribute('data-key') === 'ShiftLeft' &&
+      nowLang === 'ru'
     ) {
       curentLayout = shiftKeysRu;
       creatLayout(curentLayout);
@@ -1516,8 +1517,8 @@ document.addEventListener('mousedown', (e) => {
         .querySelector('button[data-key="ShiftLeft"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftLeft'
-      && nowLang === 'bigEng'
+      key.getAttribute('data-key') === 'ShiftLeft' &&
+      nowLang === 'bigEng'
     ) {
       curentLayout = keysEng;
       creatLayout(curentLayout);
@@ -1528,8 +1529,8 @@ document.addEventListener('mousedown', (e) => {
         .querySelector('button[data-key="CapsLock"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftLeft'
-      && nowLang === 'bigRu'
+      key.getAttribute('data-key') === 'ShiftLeft' &&
+      nowLang === 'bigRu'
     ) {
       curentLayout = keysRu;
       creatLayout(curentLayout);
@@ -1540,8 +1541,8 @@ document.addEventListener('mousedown', (e) => {
         .querySelector('button[data-key="CapsLock"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'eng'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'eng'
     ) {
       curentLayout = shiftEngKeys;
       creatLayout(curentLayout);
@@ -1549,8 +1550,8 @@ document.addEventListener('mousedown', (e) => {
         .querySelector('button[data-key="ShiftRight"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'ru'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'ru'
     ) {
       curentLayout = shiftKeysRu;
       creatLayout(curentLayout);
@@ -1558,8 +1559,8 @@ document.addEventListener('mousedown', (e) => {
         .querySelector('button[data-key="ShiftRight"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'bigEng'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'bigEng'
     ) {
       curentLayout = keysEng;
       creatLayout(curentLayout);
@@ -1570,8 +1571,8 @@ document.addEventListener('mousedown', (e) => {
         .querySelector('button[data-key="CapsLock"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'bigRu'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'bigRu'
     ) {
       curentLayout = keysRu;
       creatLayout(curentLayout);
@@ -1630,11 +1631,11 @@ document.addEventListener('mousedown', (e) => {
         creatLayout(curentLayout);
       }
     } else if (
-      key.getAttribute('data-key') === 'ControlLeft'
-      || key.getAttribute('data-key') === 'ControlRight'
-      || key.getAttribute('data-key') === 'AltRight'
-      || key.getAttribute('data-key') === 'AltLeft'
-      || key.getAttribute('data-key') === 'Tab'
+      key.getAttribute('data-key') === 'ControlLeft' ||
+      key.getAttribute('data-key') === 'ControlRight' ||
+      key.getAttribute('data-key') === 'AltRight' ||
+      key.getAttribute('data-key') === 'AltLeft' ||
+      key.getAttribute('data-key') === 'Tab'
     ) {
       key.classList.add('animate');
     } else if (key && !functionalKeys.includes(key.getAttribute('data-key'))) {
@@ -1643,9 +1644,10 @@ document.addEventListener('mousedown', (e) => {
 
       const cursorPosition = textarea.selectionStart;
       const currentValue = textarea.value;
-      const newValue = currentValue.substring(0, cursorPosition)
-        + key.textContent
-        + currentValue.substring(cursorPosition);
+      const newValue =
+        currentValue.substring(0, cursorPosition) +
+        key.textContent +
+        currentValue.substring(cursorPosition);
       textarea.value = newValue;
       textarea.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
     }
@@ -1663,8 +1665,8 @@ document.addEventListener('mouseup', (e) => {
         .querySelector('button[data-key="ShiftLeft"]')
         .classList.remove('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftLeft'
-      && nowLang === 'ru'
+      key.getAttribute('data-key') === 'ShiftLeft' &&
+      nowLang === 'ru'
     ) {
       curentLayout = keysRu;
       nowLang = 'ru';
@@ -1673,8 +1675,8 @@ document.addEventListener('mouseup', (e) => {
         .querySelector('button[data-key="ShiftLeft"]')
         .classList.remove('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftLeft'
-      && nowLang === 'bigEng'
+      key.getAttribute('data-key') === 'ShiftLeft' &&
+      nowLang === 'bigEng'
     ) {
       curentLayout = shiftEngKeys;
       nowLang = 'bigEng';
@@ -1686,8 +1688,8 @@ document.addEventListener('mouseup', (e) => {
         .querySelector('button[data-key="CapsLock"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftLeft'
-      && nowLang === 'bigRu'
+      key.getAttribute('data-key') === 'ShiftLeft' &&
+      nowLang === 'bigRu'
     ) {
       curentLayout = shiftKeysRu;
       nowLang = 'bigRu';
@@ -1699,8 +1701,8 @@ document.addEventListener('mouseup', (e) => {
         .querySelector('button[data-key="CapsLock"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'eng'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'eng'
     ) {
       curentLayout = keysEng;
       nowLang = 'eng';
@@ -1709,8 +1711,8 @@ document.addEventListener('mouseup', (e) => {
         .querySelector('button[data-key="ShiftRight"]')
         .classList.remove('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'ru'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'ru'
     ) {
       curentLayout = keysRu;
       nowLang = 'ru';
@@ -1719,8 +1721,8 @@ document.addEventListener('mouseup', (e) => {
         .querySelector('button[data-key="ShiftRight"]')
         .classList.remove('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'bigEng'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'bigEng'
     ) {
       curentLayout = shiftEngKeys;
       nowLang = 'bigEng';
@@ -1732,8 +1734,8 @@ document.addEventListener('mouseup', (e) => {
         .querySelector('button[data-key="CapsLock"]')
         .classList.add('animate');
     } else if (
-      key.getAttribute('data-key') === 'ShiftRight'
-      && nowLang === 'bigRu'
+      key.getAttribute('data-key') === 'ShiftRight' &&
+      nowLang === 'bigRu'
     ) {
       curentLayout = shiftKeysRu;
       nowLang = 'bigRu';
@@ -1755,8 +1757,8 @@ textarea.addEventListener('mousedown', (e) => {
   const key = e.target;
 
   if (
-    key.getAttribute('data-key') === 'Backspace'
-    || key.getAttribute('data-key') === 'Delete'
+    key.getAttribute('data-key') === 'Backspace' ||
+    key.getAttribute('data-key') === 'Delete'
   ) {
     const start = textarea.selectionStart;
     const end = textarea.selectionEnd;
