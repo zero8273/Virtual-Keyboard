@@ -278,7 +278,7 @@ const shiftEngKeys = [
   ],
 ];
 
-const keys = [
+const keysEng = [
   [
     {
       key: '`',
@@ -547,6 +547,543 @@ const keys = [
   ],
 ];
 
+const keysRu = [
+  [
+    {
+      key: 'ё',
+      dataKey: 'Backquote',
+    },
+    {
+      key: '1',
+      dataKey: 'Digit1',
+    },
+    {
+      key: '2',
+      dataKey: 'Digit2',
+    },
+    {
+      key: '3',
+      dataKey: 'Digit3',
+    },
+    {
+      key: '4',
+      dataKey: 'Digit4',
+    },
+    {
+      key: '5',
+      dataKey: 'Digit5',
+    },
+    {
+      key: '6',
+      dataKey: 'Digit6',
+    },
+    {
+      key: '7',
+      dataKey: 'Digit7',
+    },
+    {
+      key: '8',
+      dataKey: 'Digit8',
+    },
+    {
+      key: '9',
+      dataKey: 'Digit9',
+    },
+    {
+      key: '0',
+      dataKey: 'Digit0',
+    },
+    {
+      key: '-',
+      dataKey: 'Minus',
+    },
+    {
+      key: '=',
+      dataKey: 'Equal',
+    },
+    {
+      key: 'Backspace',
+      dataKey: 'Backspace',
+    },
+  ],
+  [
+    {
+      key: 'Tab',
+      dataKey: 'Tab',
+    },
+    {
+      key: 'й',
+      dataKey: 'KeyQ',
+    },
+    {
+      key: 'ц',
+      dataKey: 'KeyW',
+    },
+    {
+      key: 'у',
+      dataKey: 'KeyE',
+    },
+    {
+      key: 'к',
+      dataKey: 'KeyR',
+    },
+    {
+      key: 'е',
+      dataKey: 'KeyT',
+    },
+    {
+      key: 'н',
+      dataKey: 'KeyY',
+    },
+    {
+      key: 'г',
+      dataKey: 'KeyU',
+    },
+    {
+      key: 'ш',
+      dataKey: 'KeyI',
+    },
+    {
+      key: 'щ',
+      dataKey: 'KeyO',
+    },
+    {
+      key: 'з',
+      dataKey: 'KeyP',
+    },
+    {
+      key: 'х',
+      dataKey: 'BracketLeft',
+    },
+    {
+      key: 'ъ',
+      dataKey: 'BracketRight',
+    },
+    {
+      key: '\\',
+      dataKey: 'Backslash',
+    },
+    {
+      key: 'Del',
+      dataKey: 'Delete',
+    },
+  ],
+  [
+    {
+      key: 'CapsLock',
+      dataKey: 'CapsLock',
+    },
+    {
+      key: 'ф',
+      dataKey: 'KeyA',
+    },
+    {
+      key: 'ы',
+      dataKey: 'KeyS',
+    },
+    {
+      key: 'в',
+      dataKey: 'KeyD',
+    },
+    {
+      key: 'а',
+      dataKey: 'KeyF',
+    },
+    {
+      key: 'п',
+      dataKey: 'KeyG',
+    },
+    {
+      key: 'р',
+      dataKey: 'KeyH',
+    },
+    {
+      key: 'о',
+      dataKey: 'KeyJ',
+    },
+    {
+      key: 'л',
+      dataKey: 'KeyK',
+    },
+    {
+      key: 'д',
+      dataKey: 'KeyL',
+    },
+    {
+      key: 'ж',
+      dataKey: 'Semicolon',
+    },
+    {
+      key: 'э',
+      dataKey: 'Quote',
+    },
+    {
+      key: 'Enter',
+      dataKey: 'Enter',
+    },
+  ],
+  [
+    {
+      key: 'Shift',
+      dataKey: 'ShiftLeft',
+    },
+    {
+      key: 'я',
+      dataKey: 'KeyZ',
+    },
+    {
+      key: 'ч',
+      dataKey: 'KeyX',
+    },
+    {
+      key: 'с',
+      dataKey: 'KeyC',
+    },
+    {
+      key: 'м',
+      dataKey: 'KeyV',
+    },
+    {
+      key: 'и',
+      dataKey: 'KeyB',
+    },
+    {
+      key: 'т',
+      dataKey: 'KeyN',
+    },
+    {
+      key: 'ь',
+      dataKey: 'KeyM',
+    },
+    {
+      key: 'б',
+      dataKey: 'Comma',
+    },
+    {
+      key: 'ю',
+      dataKey: 'Period',
+    },
+    {
+      key: '.',
+      dataKey: 'Slash',
+    },
+    {
+      key: '▲',
+      dataKey: 'ArrowUp',
+    },
+    {
+      key: 'Shift',
+      dataKey: 'ShiftRight',
+    },
+  ],
+  [
+    {
+      key: 'Ctrl',
+      dataKey: 'ControlLeft',
+    },
+    {
+      key: 'Win',
+      dataKey: 'MetaLeft',
+    },
+    {
+      key: 'Alt',
+      dataKey: 'AltLeft',
+    },
+    {
+      key: ' ',
+      dataKey: 'Space',
+    },
+    {
+      key: 'Alt',
+      dataKey: 'AltRight',
+    },
+    {
+      key: '◄',
+      dataKey: 'ArrowLeft',
+    },
+    {
+      key: '▼',
+      dataKey: 'ArrowDown',
+    },
+    {
+      key: '►',
+      dataKey: 'ArrowRight',
+    },
+    {
+      key: 'Ctrl',
+      dataKey: 'ControlRight',
+    },
+  ],
+];
+const shiftKeysRu = [
+  [
+    {
+      key: 'Ё',
+      dataKey: 'Backquote',
+    },
+    {
+      key: '!',
+      dataKey: 'Digit1',
+    },
+    {
+      key: '"',
+      dataKey: 'Digit2',
+    },
+    {
+      key: '№',
+      dataKey: 'Digit3',
+    },
+    {
+      key: ';',
+      dataKey: 'Digit4',
+    },
+    {
+      key: '%',
+      dataKey: 'Digit5',
+    },
+    {
+      key: ':',
+      dataKey: 'Digit6',
+    },
+    {
+      key: '?',
+      dataKey: 'Digit7',
+    },
+    {
+      key: '*',
+      dataKey: 'Digit8',
+    },
+    {
+      key: '(',
+      dataKey: 'Digit9',
+    },
+    {
+      key: ')',
+      dataKey: 'Digit0',
+    },
+    {
+      key: '_',
+      dataKey: 'Minus',
+    },
+    {
+      key: '+',
+      dataKey: 'Equal',
+    },
+    {
+      key: 'Backspace',
+      dataKey: 'Backspace',
+    },
+  ],
+  [
+    {
+      key: 'Tab',
+      dataKey: 'Tab',
+    },
+    {
+      key: 'Й',
+      dataKey: 'KeyQ',
+    },
+    {
+      key: 'Ц',
+      dataKey: 'KeyW',
+    },
+    {
+      key: 'У',
+      dataKey: 'KeyE',
+    },
+    {
+      key: 'К',
+      dataKey: 'KeyR',
+    },
+    {
+      key: 'Е',
+      dataKey: 'KeyT',
+    },
+    {
+      key: 'Н',
+      dataKey: 'KeyY',
+    },
+    {
+      key: 'Г',
+      dataKey: 'KeyU',
+    },
+    {
+      key: 'Ш',
+      dataKey: 'KeyI',
+    },
+    {
+      key: 'Щ',
+      dataKey: 'KeyO',
+    },
+    {
+      key: 'З',
+      dataKey: 'KeyP',
+    },
+    {
+      key: 'Х',
+      dataKey: 'BracketLeft',
+    },
+    {
+      key: 'Ъ',
+      dataKey: 'BracketRight',
+    },
+    {
+      key: '\\',
+      dataKey: 'Backslash',
+    },
+    {
+      key: 'Del',
+      dataKey: 'Delete',
+    },
+  ],
+  [
+    {
+      key: 'CapsLock',
+      dataKey: 'CapsLock',
+    },
+    {
+      key: 'Ф',
+      dataKey: 'KeyA',
+    },
+    {
+      key: 'Ы',
+      dataKey: 'KeyS',
+    },
+    {
+      key: 'В',
+      dataKey: 'KeyD',
+    },
+    {
+      key: 'А',
+      dataKey: 'KeyF',
+    },
+    {
+      key: 'П',
+      dataKey: 'KeyG',
+    },
+    {
+      key: 'Р',
+      dataKey: 'KeyH',
+    },
+    {
+      key: 'О',
+      dataKey: 'KeyJ',
+    },
+    {
+      key: 'Л',
+      dataKey: 'KeyK',
+    },
+    {
+      key: 'Д',
+      dataKey: 'KeyL',
+    },
+    {
+      key: 'Ж',
+      dataKey: 'Semicolon',
+    },
+    {
+      key: 'Э',
+      dataKey: 'Quote',
+    },
+    {
+      key: 'Enter',
+      dataKey: 'Enter',
+    },
+  ],
+  [
+    {
+      key: 'Shift',
+      dataKey: 'ShiftLeft',
+    },
+    {
+      key: 'Я',
+      dataKey: 'KeyZ',
+    },
+    {
+      key: 'Ч',
+      dataKey: 'KeyX',
+    },
+    {
+      key: 'С',
+      dataKey: 'KeyC',
+    },
+    {
+      key: 'М',
+      dataKey: 'KeyV',
+    },
+    {
+      key: 'И',
+      dataKey: 'KeyB',
+    },
+    {
+      key: 'Т',
+      dataKey: 'KeyN',
+    },
+    {
+      key: 'Ь',
+      dataKey: 'KeyM',
+    },
+    {
+      key: 'Б',
+      dataKey: 'Comma',
+    },
+    {
+      key: 'Ю',
+      dataKey: 'Period',
+    },
+    {
+      key: '.',
+      dataKey: 'Slash',
+    },
+    {
+      key: '▲',
+      dataKey: 'ArrowUp',
+    },
+    {
+      key: 'Shift',
+      dataKey: 'ShiftRight',
+    },
+  ],
+  [
+    {
+      key: 'Ctrl',
+      dataKey: 'ControlLeft',
+    },
+    {
+      key: 'Win',
+      dataKey: 'MetaLeft',
+    },
+    {
+      key: 'Alt',
+      dataKey: 'AltLeft',
+    },
+    {
+      key: ' ',
+      dataKey: 'Space',
+    },
+    {
+      key: 'Alt',
+      dataKey: 'AltRight',
+    },
+    {
+      key: '◄',
+      dataKey: 'ArrowLeft',
+    },
+    {
+      key: '▼',
+      dataKey: 'ArrowDown',
+    },
+    {
+      key: '►',
+      dataKey: 'ArrowRight',
+    },
+    {
+      key: 'Ctrl',
+      dataKey: 'ControlRight',
+    },
+  ],
+];
+
 const functionalKeys = [
   'ControlRight',
   'ControlLeft',
@@ -562,7 +1099,7 @@ const functionalKeys = [
   'Backspace',
 ];
 
-curentLayout = keys;
+curentLayout = keysEng;
 nowLang = 'eng';
 
 const keyboard = document.createElement('div');
@@ -605,9 +1142,11 @@ creatLayout(curentLayout);
 // creatLayout(shiftEngKeys);
 
 document.addEventListener('keydown', function removeAnimation(e) {
+  console.log(e);
   e.preventDefault();
   textarea.focus();
   const key = document.querySelector(`button[data-key="${e.code}"]`);
+  //enter
   if (key.getAttribute('data-key') === 'Enter') {
     key.classList.add('animate');
     const cursorPosition = textarea.selectionStart;
@@ -618,10 +1157,9 @@ document.addEventListener('keydown', function removeAnimation(e) {
       currentValue.substring(cursorPosition);
     textarea.value = newValue;
     textarea.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
-  } else if (
-    key.getAttribute('data-key') === 'ShiftLeft' &&
-    nowLang === 'eng'
-  ) {
+  }
+  //shift key
+  else if (key.getAttribute('data-key') === 'ShiftLeft' && nowLang === 'eng') {
     curentLayout = shiftEngKeys;
     nowLang = 'bigEng';
     creatLayout(curentLayout);
@@ -629,21 +1167,94 @@ document.addEventListener('keydown', function removeAnimation(e) {
     document
       .querySelector(`button[data-key="ShiftLeft"]`)
       .classList.add('animate');
-  } else if (key.getAttribute('data-key') === 'CapsLock') {
+  } else if (key.getAttribute('data-key') === 'ShiftLeft' && nowLang === 'ru') {
+    curentLayout = shiftEngKeys;
+    nowLang = 'bigRu';
+    creatLayout(curentLayout);
+
+    document
+      .querySelector(`button[data-key="ShiftLeft"]`)
+      .classList.add('animate');
+  }
+  //capskey
+  else if (key.getAttribute('data-key') === 'CapsLock') {
+    //  document
+    //    .querySelector(`button[data-key="CapsLock"]`)
+    //    .classList.add('animate');
     if (nowLang === 'eng') {
       curentLayout = shiftEngKeys;
       nowLang = 'bigEng';
       creatLayout(curentLayout);
       document
         .querySelector(`button[data-key="CapsLock"]`)
-        .classList.toggle('animate');
+        .classList.add('animate');
     } else if (nowLang === 'bigEng') {
-      curentLayout = keys;
+      curentLayout = keysEng;
       nowLang = 'eng';
       creatLayout(curentLayout);
+      document
+        .querySelector(`button[data-key="CapsLock"]`)
+        .classList.remove('animate');
+    } else if (nowLang === 'ru') {
+      curentLayout = shiftKeysRu;
+      nowLang = 'bigRu';
+      creatLayout(curentLayout);
+      document
+        .querySelector(`button[data-key="CapsLock"]`)
+        .classList.add('animate');
+    } else if (nowLang === 'bigRu') {
+      curentLayout = keysRu;
+      nowLang = 'ru';
+      creatLayout(curentLayout);
+      document
+        .querySelector(`button[data-key="CapsLock"]`)
+        .classList.remove('animate');
     }
-    key.classList.toggle('animate');
-  } else if (key && !functionalKeys.includes(key.getAttribute('data-key'))) {
+  }
+  //   else if (key.getAttribute('data-key') === 'CapsLock') {
+  //     if (nowLang === 'ru') {
+  //       curentLayout = shiftEngKeys;
+  //       nowLang = 'bigRu';
+  //       creatLayout(curentLayout);
+  //       document
+  //         .querySelector(`button[data-key="CapsLock"]`)
+  //         .classList.toggle('animate');
+  //     } else if (nowLang === 'bigRu') {
+  //       curentLayout = keysEng;
+  //       nowLang = 'ru';
+  //       creatLayout(curentLayout);
+  //     }
+  //     key.classList.toggle('animate');
+  //   }
+  else if (e.altKey && e.ctrlKey) {
+    if (nowLang === 'eng') {
+      curentLayout = keysRu;
+      nowLang = 'ru';
+      creatLayout(curentLayout);
+    } else if (nowLang === 'bigEng') {
+      curentLayout = shiftKeysRu;
+      nowLang = 'bigRu';
+      creatLayout(curentLayout);
+    } else if (nowLang === 'ru') {
+      curentLayout = keysEng;
+      nowLang = 'eng';
+      creatLayout(curentLayout);
+    } else if (nowLang === 'bigRu') {
+      curentLayout = shiftEngKeys;
+      nowLang = 'bigEng';
+      creatLayout(curentLayout);
+    }
+    console.log(nowLang);
+  }
+  ///else functional key
+  else if (
+    key.getAttribute('data-key') === 'Backspace' ||
+    key.getAttribute('data-key') === 'Delete'
+  ) {
+    key.classList.add('animate');
+  }
+  ///other key
+  else if (key && !functionalKeys.includes(key.getAttribute('data-key'))) {
     key.classList.add('animate');
     //  console.log(key.textContent);
     const cursorPosition = textarea.selectionStart;
@@ -654,8 +1265,6 @@ document.addEventListener('keydown', function removeAnimation(e) {
       currentValue.substring(cursorPosition);
     textarea.value = newValue;
     textarea.setSelectionRange(cursorPosition + 1, cursorPosition + 1);
-    //  textarea.value += key.textContent;
-    //  console.log(e);
   }
 });
 
@@ -663,7 +1272,7 @@ document.addEventListener('keyup', function removeAnimation(e) {
   e.preventDefault();
   const key = document.querySelector(`button[data-key="${e.code}"]`);
   if (key.getAttribute('data-key') === 'ShiftLeft' && nowLang === 'bigEng') {
-    curentLayout = keys;
+    curentLayout = keysEng;
     nowLang = 'eng';
     creatLayout(curentLayout);
     key.classList.remove('animate');
