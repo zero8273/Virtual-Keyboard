@@ -4,8 +4,10 @@ textarea.id = 'keyboard';
 textarea.cols = 30;
 textarea.rows = 10;
 textarea.classList.add('text');
-// const keyboard = document.createElement('div');
-// keyboard.classList.add('keyboard');
+
+const info = document.createElement('p');
+info.textContent =
+  'Клавиатура создана в операционной системе Windows, для переключения языка комбинация: ctrl + alt';
 let curentLayout;
 let nowLang;
 
@@ -1128,6 +1130,7 @@ const creatLayout = function newlayout(arr) {
   }
   document.body.appendChild(textarea);
   document.body.appendChild(keyboard);
+  document.body.appendChild(info);
 
   keyboard.querySelectorAll('button')[13].classList.add('key-backspase');
   keyboard.querySelectorAll('button')[14].classList.add('key-tab');
