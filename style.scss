@@ -1,0 +1,57 @@
+.keyboard {
+  width: 860px;
+  margin-top: 50px;
+  &__row {
+    display: flex;
+    justify-content: center;
+  }
+}
+.key {
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+  &-backspase {
+    width: 115px;
+  }
+  &-tab {
+    width: 55px;
+  }
+  &-del {
+    width: 55px;
+  }
+  &-caps {
+    width: 110px;
+  }
+  &-enter {
+    width: 110px;
+  }
+  &-shift {
+    width: 110px;
+  }
+  &-spase {
+    width: 375px;
+  }
+  &-ctrl {
+    width: 55px;
+  }
+  &:focus-visible {
+    outline: none;
+  }
+}
+
+.animate {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+.text {
+  margin-top: 10%;
+  width: 800px;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}

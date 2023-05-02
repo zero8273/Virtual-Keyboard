@@ -1,0 +1,59 @@
+.keyboard {
+  width: 860px;
+  margin-top: 50px;
+}
+.keyboard__row {
+  display: flex;
+  justify-content: center;
+}
+
+.key {
+  height: 50px;
+  margin: 2px;
+  width: 50px;
+}
+.key-backspase {
+  width: 115px;
+}
+.key-tab {
+  width: 55px;
+}
+.key-del {
+  width: 55px;
+}
+.key-caps {
+  width: 110px;
+}
+.key-enter {
+  width: 110px;
+}
+.key-shift {
+  width: 110px;
+}
+.key-spase {
+  width: 375px;
+}
+.key-ctrl {
+  width: 55px;
+}
+.key:focus-visible {
+  outline: none;
+}
+
+.animate {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.text {
+  margin-top: 10%;
+  width: 800px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
